@@ -14,7 +14,6 @@
                             <div class="val">Пн-Вс  8:00-22:00</div>
                         </div>
                     </div>
-
                     <form class="footer-form-order">
                         <div class="caption">Оставить заявку:</div>
                         <div class="item-form">
@@ -60,6 +59,7 @@
 </footer>
 </div>
 
+{include 'file:includes/popups.tpl'}
 
 {ignore}
 <script src="assets/production/js/jquery.js"></script>

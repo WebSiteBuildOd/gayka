@@ -11,8 +11,8 @@
                                     <img src="assets/production/img/head_icon_1.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <div class="title">Время работы:</div>
-                                    <div class="info">Пн-Вс  8:00-22:00</div>
+                                    <div class="title">[[%word_1? &namespace=`langs`]]</div>
+                                    <div class="info">[[#147.m_times_work]]</div>
                                 </div>
                             </div>
                         </li>
@@ -23,8 +23,8 @@
                                     <img src="assets/production/img/head_icon_2.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <div class="title">Диагностика:</div>
-                                    <div class="info">БЕСПЛАТНО</div>
+                                    <div class="title">[[%word_2? &namespace=`langs`]]</div>
+                                    <div class="info">[[#147.m_diagn]]</div>
                                 </div>
                             </div>
                         </li>
@@ -35,13 +35,13 @@
                                     <img src="assets/production/img/head_icon_3.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <div class="title">Телефон в Киеве:</div>
-                                    <div class="info">(044)777-77-77</div>
+                                    <div class="title">[[%word_3? &namespace=`langs`]]</div>
+                                    <a href="tel:[[#147.m_phones:phoneFormat]]" class="info">[[#147.m_phones]]</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button class="btn-default btn-call-me">Перезвоните мне</button>
+                    <button class="btn-default btn-call-me">[[%word_4? &namespace=`langs`]]</button>
 
                     <button class="btn-menu-show"></button>
                 </div>
@@ -113,6 +113,13 @@
 
                     <div class="header-nav-item ">
                         <div class="nav-item__title"><a href="">Коды ошибок</a></div>
+                    </div>
+
+                    <div class="header-nav-item item__langs-switch">
+                        <div class="langs-switch">
+                        {if $_modx->context['key'] == 'web'}<a href="/ua/">UA</a>{/if}
+                        {if $_modx->context['key'] == 'ua'}<a href="/">RU</a>{/if}
+                        </div>
                     </div>
                 </div>
 
