@@ -95,12 +95,24 @@ $(function(){
             $('#popupSuccessCallback').fadeOut();
         }, 5000);
     }
+
+    function showPopupSuccessOrder(){
+        $('#popupSuccessOrderService').fadeIn();
+        setTimeout(function(){
+            $('#popupSuccessOrderService').fadeOut();
+        }, 5000);
+    }
     $(document).on('af_complete', function(event, r) {
         let form = r.form;
-        if (form.attr('id') === 'form-callback' && r.success) {
+        if ((form.attr('id') === 'form-callback' ||
+            form.attr('id') === 'form-there-question' ||
+            form.attr('id') === 'footer-form-order'
+        ) && r.success) {
             showPopupSuccess();
-        } else if (form.attr('id') === 'form-there-question' && r.success) {
-            showPopupSuccess();
+        } else if( form.attr('id') === 'form-order-service' && r.success) {
+            showPopupSuccessOrder();
         }
+
+
     });
 });

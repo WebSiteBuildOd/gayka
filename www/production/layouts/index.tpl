@@ -12,7 +12,6 @@
     <div class="section__page-content">
         <div class="container">
             [[*content]]
-
         </div>
     </div>
 {/block}

@@ -36,6 +36,8 @@ body {
   text-align: center; }
   .btn-default:hover, .btn-default:focus {
     outline: none;
+    text-decoration: none;
+    color: #fff;
     background: linear-gradient(to right, #00aeef 0, #004466 100%); }
 
 .btn-red {
@@ -170,9 +172,11 @@ body {
     .popup .content .title {
       font-weight: 600;
       font-size: 27px;
-      margin-bottom: 5px; }
+      margin-bottom: 15px;
+      line-height: 1; }
     .popup .content .text {
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      line-height: 1.2; }
 
 /* Popups End*/
 /*Header*/
@@ -303,7 +307,7 @@ body {
   flex-wrap: wrap;
   align-items: center; }
   .header-nav-other > div {
-    margin-left: 80px; }
+    margin-left: 60px; }
 
 .page-header__nav__locations .nav-item__title {
   padding-left: 17px; }
@@ -760,13 +764,16 @@ body {
   justify-content: space-between; }
   .footer__right-col ul {
     list-style: none;
-    padding: 0;
+    padding: 5px 0  0;
     margin: 0 0 20px; }
   .footer__right-col li {
-    margin-bottom: 5px; }
+    margin-bottom: 14px;
+    display: block; }
   .footer__right-col a {
     font-size: 18px;
-    font-weight: 600; }
+    font-weight: 600;
+    display: block;
+    line-height: 1; }
     .footer__right-col a {
       color: #212529; }
       .footer__right-col a:hover, .footer__right-col a:focus {

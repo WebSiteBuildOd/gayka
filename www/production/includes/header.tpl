@@ -61,59 +61,24 @@
                 </div>
 
                 <div class="header-nav-other">
-                    <div class="header-nav-item header-nav-item-menu">
-                        <div class="nav-item__title">ГЕО</div>
-                        <div class="nav-item__content">
-                            <ul>
-                                <li><a href="">Киев</a></li>
-                                <li><a href="">Одесса</a></li>
-                                <li><a href="">Одесса</a></li>
-                                <li><a href="">Одесса</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    [[pdoMenu?
+                        &parents=`152,150,154`
+                        &context=`web`
+                        &level=`2`
+                        &showHidden=`1`
+                        &displayStart=`1`
+                        &tplStart=`@INLINE <div class="header-nav-item header-nav-item-menu"><div class="nav-item__title">[[+menutitle]]</div><div class="nav-item__content"><ul>[[+wrapper]]</ul></div></div>`
+                        &tplOuter=`@INLINE [[+wrapper]]`
+                        &sortby=`{ "menuindex" : "ASC" }`
+                    ]]
 
-                    <div class="header-nav-item header-nav-item-menu">
-                        <div class="nav-item__title">Типичные поломки</div>
-                        <div class="nav-item__content">
-                            <ul>
-                                <li>
-                                    <a href="">Выезд мастера</a>
-                                    <div class="nav-item__content nav-item__content__sub">
-                                        <ul>
-                                            <li><a href="service.php">Ремонт стиральных машин</a></li>
-                                            <li><a href="">Бренды стиральных машин</a></li>
-                                            <li><a href="">Мастера в вашем городе</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="">Диагностика (при выполнении ремонта)</a>
-                                    <div class="nav-item__content nav-item__content__sub">
-                                        <ul>
-                                            <li><a href="service.php">Ремонт стиральных машин</a></li>
-                                            <li><a href="">Бренды стиральных машин</a></li>
-                                            <li><a href="">Мастера в вашем городе</a></li>
-                                        </ul>
-                                    </div></li>
-                                <li><a href="">Диагностика (в случае отказа от ремонта)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                                <li><a href="">Замена ТЭНа (водонагревателя)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="header-nav-item">
-                        <div class="nav-item__title"><a href="">Блог мастера</a></div>
-                    </div>
-
-                    <div class="header-nav-item ">
-                        <div class="nav-item__title"><a href="">Коды ошибок</a></div>
-                    </div>
+                    [[pdoResources?
+                        &parents=`0`
+                        &resources=`161,80`
+                        &tpl=`@INLINE <div class="header-nav-item"><div class="nav-item__title"><a href="[[+uri]]">[[+menutitle:default=`[[+pagetitle]]`]]</a></div></div>`
+                        &limit=`2`
+                        &sortby=`{ "menuindex" : "ASC" }`
+                    ]]
 
                     <div class="header-nav-item item__langs-switch">
                         <div class="langs-switch">

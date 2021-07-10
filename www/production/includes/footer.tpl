@@ -6,41 +6,41 @@
                 <div class="footer__left-col">
                     <div class="footer__infos">
                         <div class="item-footer-info">
-                            <div class="title">Телефон в Киеве:</div>
-                            <div class="val">(044)777-77-77</div>
+                            <div class="title">[[%word_3? &namespace=`langs`]]</div>
+                            <a href="tel:[[#147.m_phones:phoneFormat]]" class="val">[[#147.m_phones]]</a>
                         </div>
                         <div class="item-footer-info">
-                            <div class="title">Время работы:</div>
-                            <div class="val">Пн-Вс  8:00-22:00</div>
+                            <div class="title">[[%word_1? &namespace=`langs`]]</div>
+                            <div class="val">[[#147.m_times_work]]</div>
                         </div>
                     </div>
-                    <form class="footer-form-order">
-                        <div class="caption">Оставить заявку:</div>
-                        <div class="item-form">
-                            <input type="text" placeholder="Ваше имя*" required>
-                        </div>
-                        <div class="item-form">
-                            <input type="text" placeholder="Ваш телефон*" required>
-                        </div>
-                        <div class="item-form">
-                            <button class="submit btn-default" type="submit">Вызвать мастера</button>
-                        </div>
-                    </form>
+                    [[!AjaxForm?
+                        &snippet=`FormIt`
+                        &form=`@FILE: chunks/BASE/forms/form_footer-callback.tpl`
+                        &hooks=`email`
+                        &emailTpl=`@FILE: chunks/BASE/emails/email_footer-callback.tpl`
+                        &emailSubject=`Форма обратной связи`
+                        &emailTo=`[[++g_email]]`
+                        &validate=`name:required,phone:required,v-i:blank`
+                        &validationErrorMessage=`В форме содержатся ошибки!`
+                        &successMessage=`Сообщение успешно отправлено`
+                        &submitVar=`form-footer-callback`
+                    ]]
+
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__right-col">
                     <div class="footer__col-color">
                         <ul>
-                            <li><a href="">О сервис-центре</a></li>
-                            <li><a href="">Ремонт техники</a></li>
-                            <li><a href="">Установка техники</a></li>
-                            <li><a href="">Коды ошибок</a></li>
-                            <li><a href="">Контакты</a></li>
-                            <li><a href="">Цены и услуги</a></li>
-                            <li><a href="">Отзывы</a></li>
-                            <li><a href="">Гарантия</a></li>
-                            <li><a href="">Блог</a></li>
+                            [[pdoResources?
+                                &parents=`0`
+                                &limit=`10`
+                            &tpl=`@CODE:<li><a href="[[+uri]]">[[+pagetitle]]</a></li>`
+                            &depth=`1`
+                            &where=`{ "parent" : "0", "hidemenu" : "0" }`
+                            &context=`web`
+                            ]]
                         </ul>
                     </div>
                     <div class="footer__col">
