@@ -829,7 +829,8 @@ body {
     margin: 20px 0 0; }
   .contacts__page__info li a {
     display: inline-block;
-    margin-bottom: 20px; }
+    text-decoration: underline;
+    /*margin-bottom: 20px;*/ }
     .contacts__page__info li a {
       color: #212529; }
       .contacts__page__info li a:hover, .contacts__page__info li a:focus {

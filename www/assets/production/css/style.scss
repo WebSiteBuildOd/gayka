@@ -993,7 +993,8 @@ body {
     a {
       @include link-hover;
       display: inline-block;
-      margin-bottom: 20px;
+      text-decoration: underline;
+      /*margin-bottom: 20px;*/
     }
   }
 }

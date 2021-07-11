@@ -64,6 +64,8 @@
         </div>
         {/if}
 
+        {set $priceList = $_modx->resource.id | resource : 's_prices' | fromJSON}
+        {if count($priceList)}
         <div class="price__section">
             <div class="caption-section__service">Цены</div>
 
@@ -72,60 +74,28 @@
                     <div class="table__scroll">
                         <div class="t_head">
                             <div class="t_row">
-                                <div class="th">Виды работ</div>
-                                <div class="th">Сроки</div>
-                                <div class="th">Гарантия</div>
-                                <div class="th">Цена</div>
+                                <div class="th">[[%word_28? &namespace=`langs`]]</div>
+                                <div class="th">[[%word_29? &namespace=`langs`]]</div>
+                                <div class="th">[[%word_30? &namespace=`langs`]]</div>
+                                <div class="th">[[%word_31? &namespace=`langs`]]</div>
                             </div>
                         </div>
                         <div class="t_body">
+                            {foreach $priceList as $price}
                             <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
+                                <div class="td">{$price['p_type']}</div>
+                                <div class="td">{$price['p_time']}</div>
+                                <div class="td">{$price['p_gar']}</div>
+                                <div class="td">{$price['p_price']}</div>
                             </div>
-
-                            <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
-                            </div>
-
-                            <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
-                            </div>
-
-                            <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
-                            </div>
-
-                            <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
-                            </div>
-
-                            <div class="t_row">
-                                <div class="td">Замена ТЭНа</div>
-                                <div class="td">30-40 минут</div>
-                                <div class="td">6 месяцев</div>
-                                <div class="td">от 420 грн.</div>
-                            </div>
+                            {/foreach}
                         </div>
                     </div>
                 </div>
-                <div class="view-all__wrap"><button class="btn-view-all">Развернуть</button></div>
+                [[-<div class="view-all__wrap"><button class="btn-view-all">Развернуть</button></div>-]]
             </div>
         </div>
+        {/if}
 
         <div class="we-renovating">
             <div class="caption-section__service">[[%word_19? &namespace=`langs`]]</div>

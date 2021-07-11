@@ -106,7 +106,8 @@ $(function(){
         let form = r.form;
         if ((form.attr('id') === 'form-callback' ||
             form.attr('id') === 'form-there-question' ||
-            form.attr('id') === 'footer-form-order'
+            form.attr('id') === 'footer-form-order' ||
+            form.attr('id') === 'form-contacts'
         ) && r.success) {
             showPopupSuccess();
         } else if( form.attr('id') === 'form-order-service' && r.success) {
