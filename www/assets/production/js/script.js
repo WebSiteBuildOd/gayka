@@ -88,6 +88,14 @@ $(function(){
         $(this).closest('.popup').fadeOut(200);
     });
 
+    var formSearchBlog = $('#formSearchBlog');
+    formSearchBlog.find('[name="search"]').focus(function(){
+        formSearchBlog.addClass('active');
+    });
+    formSearchBlog.find('[name="search"]').focusout(function(){
+        ($(this).val() === '')? formSearchBlog.removeClass('active') : true;
+    });
+
     /* AjaxForm */
     function showPopupSuccess(){
         $('#popupSuccessCallback').fadeIn();
@@ -113,7 +121,5 @@ $(function(){
         } else if( form.attr('id') === 'form-order-service' && r.success) {
             showPopupSuccessOrder();
         }
-
-
     });
 });
