@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/production/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/production/libs/slick/slick.css">
     <link rel="stylesheet" href="assets/production/css/style.css?{''|date:'U'}">
+    <link rel="stylesheet" href="assets/production/css/update.css?{''|date:'U'}">
 
     <title>[[*Title:default=`[[*pagetitle]]`]]</title>
 

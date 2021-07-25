@@ -4,7 +4,7 @@
         <a href="[[+uri]]" class="title" tabindex="0">[[+pagetitle]]</a>
         <div class="desc">[[+introtext:ellipsis=`180`]]</div>
         <div class="article__info">
-            <div class="author__name">Артур Серебрин</div>
+            <div class="author__name">[[%word_40? &namespace=`langs`]]</div>
             <div class="article__date">- [[+publishedon:date=`%b %d, %Y`]]</div>
         </div>
     </div>

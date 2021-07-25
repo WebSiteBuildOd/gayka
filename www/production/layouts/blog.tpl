@@ -20,7 +20,7 @@
                     <div class="blog__first-article">
                         <a href="{$article['uri']}" class="article__title">{$article['pagetitle']}</a>
                         <div class="article__info">
-                            <div class="author__name">Артур Серебрин</div>
+                            <div class="author__name">[[%word_40? &namespace=`langs`]]</div>
                             <div class="article__date">- {$article['publishedon'] | date_format : '%b %d, %Y'}</div>
                         </div>
                         <div class="article__image">
@@ -37,10 +37,11 @@
                 <div class="col-lg-5">
                     <div class="blog__search">
                         <div class="search__blog__wrap">
-                            <form action="" class="form__search-blog" id="formSearchBlog">
-                                <input type="search" name="search" value="" placeholder="Поиск по блогу">
-                                <button type="submit" name="submit" value=""></button>
-                            </form>
+                            [[!SimpleSearchForm?
+                                &landing=`204`
+                                &tpl=`@FILE includes/form.search-blog.tpl`
+                            ]]
+
                         </div>
                     </div>
                     <div class="blog__list-mini-articles">
@@ -72,7 +73,7 @@
                     'ajaxElemMore' => '#pdopage .btn-more',
                     'ajaxElemPagination' => '#pdopage .pagination',
                     'tpl' => '@FILE includes/article.item.tpl',
-                    'ajaxTplMore' => '@INLINE <div class="view-all__wrap"><button class="btn-view-all btn-more">Загрузить ещё</button></div>'
+                    'ajaxTplMore' => '@INLINE <div class="view-all__wrap"><button class="btn-view-all btn-more">[[%word_38? &namespace=`langs`]]</button></div>'
                     ]}
                     {'result' | placeholder}
                 </div>

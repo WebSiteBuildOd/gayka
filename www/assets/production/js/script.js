@@ -96,6 +96,35 @@ $(function(){
         ($(this).val() === '')? formSearchBlog.removeClass('active') : true;
     });
 
+    /* anchor  */
+
+    let arrBlogAnchor = '';
+
+    $('#content-article-page h2, #content-article-page h3, #content-article-page h4').each(function(i){
+        let id = 'h2-h3-'+i;
+        $(this).attr('id', id);
+        arrBlogAnchor += '<li><a href="#'+id+'" class="data-blog-anchor">'+$(this).text().trim()+'</a></li>';
+    });
+
+    if(arrBlogAnchor.length) {
+        $('.article__sidebar .ul-sidebar-list').append(arrBlogAnchor);
+    } else {
+        $('.article__sidebar').hide();
+    }
+
+    $('.article__sidebar .ul-sidebar-list a').click(function(e){
+       e.preventDefault();
+        let _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: ($(_href).offset().top - 25)+"px"});
+    });
+
+    if($('[data-value-count-comments]').length) {
+        $('#count-comments').text($('[data-value-count-comments]').attr('data-value-count-comments'));
+    }
+
+
+    /* End anchor  */
+
     /* AjaxForm */
     function showPopupSuccess(){
         $('#popupSuccessCallback').fadeIn();

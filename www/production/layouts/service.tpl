@@ -59,7 +59,7 @@
                 </div>
 
                 [[-Тут доделать Еще поломки -]]
-                [[-<div class="view-all__wrap"><button class="btn-view-all">Ещё поломки</button></div>-]]
+                [[-<div class="view-all__wrap"><button class="btn-view-all">[[%word_41? &namespace=`langs`]]</button></div>-]]
             </div>
         </div>
         {/if}
@@ -67,7 +67,7 @@
         {set $priceList = $_modx->resource.id | resource : 's_prices' | fromJSON}
         {if count($priceList)}
         <div class="price__section">
-            <div class="caption-section__service">Цены</div>
+            <div class="caption-section__service">[[%word_42? &namespace=`langs`]]</div>
 
             <div class="section-service-padding price__contents__table">
                 <div class="table_price">
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                [[-<div class="view-all__wrap"><button class="btn-view-all">Развернуть</button></div>-]]
+                [[-<div class="view-all__wrap"><button class="btn-view-all">[[%word_43? &namespace=`langs`]]</button></div>-]]
             </div>
         </div>
         {/if}
@@ -112,7 +112,7 @@
                     'ajaxElemRows' => '#pdopage .rows'
                     'ajaxElemPagination' => '#pdopage .pagination'
                     'tpl' => '@INLINE <div class="col-lg-3 col-md-4 col-6"><a href="[[+uri]]" class="item"><img src="[[+tv.icon]]" alt="[[+pagetitle]]"></a></div>'
-                    'ajaxTplMore' => '@INLINE <div class="view-all__wrap"><button class="btn-view-all btn-more">Смотреть ещё</button></div>'
+                    'ajaxTplMore' => '@INLINE <div class="view-all__wrap"><button class="btn-view-all btn-more">[[%word_44? &namespace=`langs`]]</button></div>'
                     ]}
                     {'result' | placeholder}
                 </div>
@@ -141,7 +141,7 @@
                 {/foreach}
             </div>
 
-            [[-<div class="view-all__wrap"><button class="btn-view-all">Больше вопросов</button></div>-]]
+            [[-<div class="view-all__wrap"><button class="btn-view-all">[[%word_45? &namespace=`langs`]]</button></div>-]]
         </div>
     </div>
     {/if}
